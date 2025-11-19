@@ -12,7 +12,7 @@ export default function RegisterPage() {
     e.preventDefault();
     setError(""); setBusy(true);
 
-    const res = await fetch("/api/register", {
+    const res = await fetch("/api/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
